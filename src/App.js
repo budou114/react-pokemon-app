@@ -9,6 +9,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   const [pokemonData, setPokemonData] = useState([]);
+  const [nextURL, setNextURL] = useState("");
 
   useEffect(() => {
     const fetchPokemonData = async () => {
@@ -17,6 +18,7 @@ function App() {
 
       // 各ポケモンの詳細なデータを取得
       loadPokemon(res.results);
+      setNextURL(res.next);
       setLoading(false);
     };
     fetchPokemonData();
@@ -33,7 +35,14 @@ function App() {
     setPokemonData(_pokemonData);
   };
 
-  console.log(pokemonData);
+  const handleNextPage = async () => {
+    setLoading(true);
+    let data = await getAllPokemon(nextURL);
+    await loadPokemon(data.results);
+    // setNextURL(res.next);
+    setLoading(false);
+  };
+  const handlePrevPage = () => {};
 
   return (
     <>
@@ -47,6 +56,10 @@ function App() {
             {pokemonData.map((pokemon, index) => {
               return <Card key={index} pokemon={pokemon} />
             })}
+          </div>
+          <div>
+            <button onClick={handlePrevPage}>前へ</button>
+            <button onClick={handleNextPage}>次へ</button>
           </div>
         </>
         )}
