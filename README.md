@@ -5,6 +5,10 @@
   【Reactアプリ開発】3種類のReactアプリケーションを構築して、Reactの理解をさらに深めるステップアップ講座
 - 参考リンク  
   https://www.udemy.com/course/react-3project-app-udemy/
+  
+
+## Vercel NowにデプロイしたURL  
+  https://react-pokemon-app-ten.vercel.app/
 
 ## インストール履歴
 - VSCodeに入れたもの  
