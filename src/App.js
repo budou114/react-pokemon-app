@@ -70,7 +70,7 @@ function App() {
               return <Card key={index} pokemon={pokemon} />
             })}
           </div>
-          <div>
+          <div className="btn">
             <button onClick={handlePrevPage}>前へ</button>
             <button onClick={handleNextPage}>次へ</button>
           </div>
