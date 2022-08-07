@@ -12,6 +12,6 @@
   - Prettier - Code formatter
   
 ## 外部サイト
-- CSSボックスシャドウジェネレーター(box-shadowの調整で使用)
+- CSSボックスシャドウジェネレーター(box-shadowの調整で使用)  
   https://hiroyuki-n.github.io/boxShadow_generator/
   
